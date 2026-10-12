@@ -8,10 +8,9 @@ body {
   line-height: 1.55;
 }
 h1, h2 { font-weight: 400; margin: 0; }
-h1 { font-size: 22px; }
-h2 { font-size: 22px; margin-bottom: 8px; }
 p { margin: 0 0 12px; }
-a { color: inherit; }
+a { color: inherit; text-decoration-color: #ccc; text-underline-offset: 3px; }
+a:hover { text-decoration-color: #222; }
 img { display: block; max-width: 100%; }
 
 header, section {
@@ -19,21 +18,33 @@ header, section {
   margin: 0 auto;
   padding: 0 16px;
 }
-header { padding-top: 32px; padding-bottom: 48px; }
-.def { color: #777; margin: 2px 0 0; }
-section { margin-bottom: 48px; }
 
-.credits { list-style: none; margin: 0; padding: 0; }
+header { padding-top: 56px; padding-bottom: 56px; }
+h1 { font-size: 30px; letter-spacing: 0.01em; line-height: 1.2; }
+.def { margin: 2px 0 0; font-style: italic; color: #888; }
 
-.photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  max-width: 1000px;
-  margin: 0 auto 6px;
-  padding: 0 16px;
+section { margin-bottom: 56px; }
+h2 {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
 }
-.photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.meta { font-style: italic; color: #666; }
+.name { font-size: 22px; margin-bottom: 4px; }
+
+.credits { list-style: none; margin: 24px 0 0; padding: 0; }
+.credits li {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.6fr;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.credits span:last-child { color: #888; }
 
 .gallery { overflow: hidden; padding-bottom: 48px; }
 .track {
@@ -48,10 +59,11 @@ section { margin-bottom: 48px; }
 .track figcaption {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 24px 12px 8px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-  color: #fff;
-  font-size: 15px;
+  padding: 20px 10px 6px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  font-size: 14px;
 }
 @keyframes scroll { to { transform: translateX(calc(-50% - 3px)); } }
 @media (prefers-reduced-motion: reduce) {
@@ -60,7 +72,7 @@ section { margin-bottom: 48px; }
 }
 
 @media (max-width: 640px) {
-  .photos { grid-template-columns: 1fr 1fr; }
-  .photos img:last-child { grid-column: span 2; aspect-ratio: 16 / 10; }
+  .credits li { grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .credits span:last-child { grid-column: 1 / -1; font-size: 16px; }
   .track figure { height: 200px; }
 }
