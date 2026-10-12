@@ -27,7 +27,9 @@
         Then, without warning, the solid ground he has always stood on gives way.
         A short, intimate monologue about love, loss, and the things we cannot undo.
       </p>
-      <p class="meta">Tickets available soon.</p>
+      <div class="tickets" id="tickets">
+        <p class="meta">Tickets available soon.</p>
+      </div>
     </section>
 
     <section>
@@ -46,13 +48,32 @@
     </section>
 
 
-    <div class="gallery" aria-label="Production gallery">
-      <div class="track" id="track"></div>
+    <section class="photos">
+      <button class="photos__toggle" id="photos-toggle" aria-expanded="false" aria-controls="photos-panel">
+        <span>Photos</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5l4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </section>
+    <div class="photos__panel" id="photos-panel" inert>
+      <div class="photos__inner">
+        <div class="gallery" aria-label="Production gallery">
+          <div class="track" id="track"></div>
+        </div>
+      </div>
     </div>
 
   </main>
 
   <script>
+    // Tickets: paste the Stripe Payment Link here to switch "available soon" to a button.
+    const TICKETS = { url: "", price: "" };
+
+    if (TICKETS.url) {
+      document.getElementById("tickets").innerHTML = `
+        <a class="tickets__button" href="${TICKETS.url}">Get tickets</a>
+        ${TICKETS.price ? `<span class="meta">${TICKETS.price}</span>` : ""}`;
+    }
+
     // Gallery: add a line here for each new photo.
     const GALLERY = [
       { src: "images/cabaret-emcee.jpg", caption: "Cabaret, Weathervane Playhouse" },
@@ -72,6 +93,17 @@
     track.innerHTML = set.map((g, i) => card(g, i >= GALLERY.length)).join("")
       + set.map(g => card(g, true)).join("");
     track.style.setProperty("--duration", `${set.length * 7}s`);
+    track.querySelectorAll("figure").forEach((f, i) => f.style.setProperty("--i", Math.min(i, 8)));
+
+    // Photos dropdown
+    const toggle = document.getElementById("photos-toggle");
+    const panel = document.getElementById("photos-panel");
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", open);
+      panel.classList.toggle("is-open", open);
+      panel.inert = !open;
+    });
   </script>
 </body>
 </html>
