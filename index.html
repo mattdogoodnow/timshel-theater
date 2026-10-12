@@ -62,7 +62,7 @@
     const track = document.getElementById("track");
     const card = ({ src, caption }, hidden) => `
       <figure${hidden ? ' aria-hidden="true"' : ""}>
-        <img src="${src}" alt="${hidden ? "" : caption}" loading="lazy">
+        <img src="${src}" alt="${hidden ? "" : caption}" decoding="async">
         <figcaption>${caption}</figcaption>
       </figure>`;
     // Repeat the set so the strip is wider than the screen, then double it for a seamless loop.
