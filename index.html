@@ -4,116 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Timshel Theater</title>
-  <meta name="description" content="Timshel Theater. Sea Wall by Simon Stephens, coming January 30 in Kent, Ohio.">
-  <meta property="og:title" content="Timshel Theater">
-  <meta property="og:description" content="Sea Wall, coming January 30 in Kent, Ohio.">
-  <meta property="og:image" content="/images/cabaret-emcee.jpg">
+  <meta name="description" content="Timshel Theater. Sea Wall, January 30, Kent, Ohio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="nav">
-    <a class="nav__brand" href="/">Timshel Theater</a>
-    <nav class="nav__links">
-      <a href="#sea-wall">Sea Wall</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-    </nav>
+  <header>
+    <h1>Timshel Theater</h1>
+    <p class="def"><i>timshel</i>: thou mayest</p>
   </header>
 
   <main>
 
-    <section class="hero">
-      <h1 class="hero__title">Timshel</h1>
-      <div class="definition">
-        <p class="definition__head">
-          <span class="definition__word">tim·shel</span>
-          <span class="definition__pron">/ˈtɪm.ʃɛl/</span>
-          <span class="definition__pos">Hebrew, verb</span>
-        </p>
-        <p class="definition__hebrew" lang="he" dir="rtl">תִּמְשָׁל</p>
-        <ol class="definition__senses">
-          <li><em>“Thou mayest.”</em> The freedom to choose; a path that is offered, not ordered.</li>
-        </ol>
-        <p class="definition__note">From Genesis 4:7, made famous by John Steinbeck’s <em>East of Eden</em>.</p>
-      </div>
-    </section>
-
-    <section id="sea-wall" class="section production">
-      <p class="eyebrow">Coming soon</p>
-      <h2 class="section__title">Sea Wall</h2>
-      <p class="production__byline">by Simon Stephens</p>
-      <p class="production__when">January 30 &middot; Kent, Ohio</p>
-      <p class="production__bio">
-        Alex is a photographer. He loves his wife, Helen, his young daughter, Lucy, and his father-in-law, Bob, a retired soldier with a house in the south of France and a habit of arguing about God.
-        Over one quiet, unbroken conversation, Alex tells you about a summer by the sea, the wall that drops away into the deep, and the moment that changed everything.
-        A short, intimate one-man play about love, grief, and what we are left holding.
+    <section>
+      <h2>Sea Wall</h2>
+      <p>Coming soon. January 30, Kent, Ohio.</p>
+      <p>
+        Alex is a photographer. He loves his wife, Helen, his young daughter, Lucy, and his father-in-law, Bob.
+        In one quiet conversation, he tells you about a summer by the sea, and the moment that changed everything.
       </p>
     </section>
 
-    <section id="about" class="section about">
-      <p class="eyebrow">About me</p>
-      <h2 class="section__title">Matt McCombs</h2>
-      <ul class="contact">
-        <li><span>Phone</span><a href="tel:+13306040847">330-604-0847</a></li>
-        <li><span>Email</span><a href="mailto:mattdogoodnow@gmail.com">mattdogoodnow@gmail.com</a></li>
+    <section>
+      <h2>About me</h2>
+      <p>
+        Matt McCombs<br>
+        <a href="tel:+13306040847">330-604-0847</a><br>
+        <a href="mailto:mattdogoodnow@gmail.com">mattdogoodnow@gmail.com</a>
+      </p>
+      <ul class="credits">
+        <li><i>Sea Wall</i>, Alex, Timshel Theater</li>
+        <li><i>Cabaret</i>, Emcee, Weathervane Playhouse</li>
+        <li><i>Something Rotten!</i>, Shakespeare, Weathervane Playhouse</li>
+        <li><i>Godspell</i>, Judas, Amherst Community Theater</li>
       </ul>
-
-      <h3 class="subhead">Productions</h3>
-      <table class="credits">
-        <thead>
-          <tr><th>Show</th><th>Role</th><th>Company</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Sea Wall</td><td>Alex</td><td>Timshel Theater</td></tr>
-          <tr><td>Cabaret</td><td>Emcee</td><td>Weathervane Playhouse</td></tr>
-          <tr><td>Something Rotten!</td><td>Shakespeare</td><td>Weathervane Playhouse</td></tr>
-          <tr><td>Godspell</td><td>Judas</td><td>Amherst Community Theater</td></tr>
-        </tbody>
-      </table>
     </section>
 
-    <section class="photos" aria-label="Photos of Matt">
-      <figure><img src="images/cabaret-emcee.jpg" alt="Matt as the Emcee in Cabaret" loading="lazy"></figure>
-      <figure><img src="images/something-rotten-shakespeare.jpg" alt="Matt as Shakespeare in Something Rotten!" loading="lazy"></figure>
-      <figure><img src="images/godspell-judas.jpg" alt="Matt as Judas in Godspell" loading="lazy"></figure>
-    </section>
+    <div class="photos">
+      <img src="images/cabaret-emcee.jpg" alt="Matt as the Emcee in Cabaret" loading="lazy">
+      <img src="images/something-rotten-shakespeare.jpg" alt="Matt as Shakespeare in Something Rotten!" loading="lazy">
+      <img src="images/godspell-judas.jpg" alt="Matt as Judas in Godspell" loading="lazy">
+    </div>
 
-    <section id="gallery" class="gallery" aria-label="Production gallery">
-      <div class="gallery__track" id="gallery-track"></div>
-    </section>
+    <div class="gallery" aria-label="Production gallery">
+      <div class="track" id="track"></div>
+    </div>
 
   </main>
 
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> Timshel Theater &middot; Kent, Ohio</p>
-  </footer>
-
   <script>
-    // Gallery: add a line here for each new photo. Captions sit over the image.
+    // Gallery: add a line here for each new photo.
     const GALLERY = [
-      { src: "images/cabaret-emcee.jpg", caption: "Cabaret · Emcee · Weathervane Playhouse" },
-      { src: "images/something-rotten-shakespeare.jpg", caption: "Something Rotten! · Shakespeare · Weathervane Playhouse" },
-      { src: "images/godspell-judas.jpg", caption: "Godspell · Judas · Amherst Community Theater" },
+      { src: "images/cabaret-emcee.jpg", caption: "Cabaret, Weathervane Playhouse" },
+      { src: "images/something-rotten-shakespeare.jpg", caption: "Something Rotten!, Weathervane Playhouse" },
+      { src: "images/godspell-judas.jpg", caption: "Godspell, Amherst Community Theater" },
     ];
 
-    const track = document.getElementById("gallery-track");
+    const track = document.getElementById("track");
     const card = ({ src, caption }, hidden) => `
-      <figure class="gallery__item"${hidden ? ' aria-hidden="true"' : ""}>
+      <figure${hidden ? ' aria-hidden="true"' : ""}>
         <img src="${src}" alt="${hidden ? "" : caption}" loading="lazy">
         <figcaption>${caption}</figcaption>
       </figure>`;
-    // Repeat the set so the strip is always wider than the screen, then double it for a seamless loop.
+    // Repeat the set so the strip is wider than the screen, then double it for a seamless loop.
     const reps = Math.max(1, Math.ceil(8 / GALLERY.length));
     const set = Array.from({ length: reps }, () => GALLERY).flat();
     track.innerHTML = set.map((g, i) => card(g, i >= GALLERY.length)).join("")
       + set.map(g => card(g, true)).join("");
     track.style.setProperty("--duration", `${set.length * 7}s`);
-
-    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
